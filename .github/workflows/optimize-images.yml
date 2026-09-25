@@ -1,0 +1,43 @@
+name: Optimize Images
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "assets/**"
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Optimize Images
+        id: optimize
+        uses: area44/optimize-img-action@76b7150a2c4aa19d36902d3f215830d65c549dbd # main
+        with:
+          path: "assets"
+          jpeg_quality: "80"
+          png_compression_level: "6"
+          webp_quality: "80"
+
+      - name: Create Pull Request
+        if: steps.optimize.outputs.optimized_count > 0
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8
+        with:
+          commit-message: "chore: auto-optimize images"
+          title: "chore: auto-optimize images"
+          body: |
+            Automated image optimization summary:
+            - **Images Optimized:** ${{ steps.optimize.outputs.optimized_count }}
+            - **Total Saved:** ${{ steps.optimize.outputs.total_saved_bytes }} bytes
+          branch: "auto-optimize-images"
+          delete-branch: true

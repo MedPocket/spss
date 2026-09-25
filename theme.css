@@ -1,0 +1,10 @@
+/*
+  theme.css
+  ---------
+  Drop a theme.css in your project root to override any design token.
+  It is the last layer in the cascade.
+*/
+
+article.prose > h1 + p.text-muted-foreground {
+  display: none;
+}
