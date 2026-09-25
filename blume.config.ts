@@ -1,14 +1,14 @@
 import { defineConfig } from "blume";
 
 export default defineConfig({
-  title: "Ultraso",
-  description: "Tài liệu về siêu âm lâm sàng.",
+  title: "SPSS",
+  description: "Tài liệu hướng dẫn sử dụng SPSS trong thống kê và phân tích số liệu.",
 
   feedback: false,
 
   github: {
     owner: "MedPocket",
-    repo: "ultraso",
+    repo: "spss",
     branch: "main",
   },
 
@@ -36,6 +36,6 @@ export default defineConfig({
   },
 
   deployment: {
-    base: process.env.NETLIFY === "true" ? "/" : "/ultraso",
+    base: process.env.NETLIFY === "true" ? "/" : "/spss",
   },
 });

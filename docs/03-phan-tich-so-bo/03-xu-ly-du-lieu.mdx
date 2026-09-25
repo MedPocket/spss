@@ -1,0 +1,57 @@
+---
+title: 03. Xử Lý Và Biến Đổi Dữ Liệu
+description: Hướng dẫn tính điểm tổng thang đo (Compute Variable), mã hóa lại biến (Recode) và lọc dữ liệu (Select Cases).
+---
+
+# Xử Lý Và Biến Đổi Dữ Liệu (Manipulating Data)
+
+Trong quá trình phân tích, bạn thường cần tạo các biến mới từ các biến hiện có (như tính tổng điểm thang đo, nghịch đảo điểm câu hỏi tiêu cực, hoặc phân nhóm tuổi).
+
+---
+
+## 1. Tính Tổng Điểm Thang Đo (Compute Variable)
+
+Để tính tổng hoặc trung bình cộng điểm số của các câu hỏi thành một chỉ số tổng hợp:
+
+1. Vào menu **Transform** $\r\rightarrow$ **Compute Variable...**
+2. Trong ô **Target Variable**, nhập tên biến mới (ví dụ: `tot_stress`).
+3. Trong ô **Numeric Expression**, nhập công thức (ví dụ: `item1 + item2 + item3 + item4` hoặc chọn hàm `SUM(item1 TO item4)` / `MEAN(item1, item2, item3, item4)`).
+4. Nhấn **OK**.
+
+![Hộp thoại Compute Variable](../../assets/03-phan-tich-so-bo/ch8_p98_img1.jpg)
+
+---
+
+## 2. Mã Hóa Lại Biến (Recode into Different Variables)
+
+Nên sử dụng **Recode into Different Variables** để tạo biến mới, tránh đè lên biến gốc:
+
+### Trường hợp 1: Đảo ngược điểm câu hỏi tiêu cực (Reverse Coding)
+
+Nếu câu hỏi 1-5 theo thang Likert 1-5 nhưng có câu hỏi đảo ngược nghĩa:
+
+- $1 \r\rightarrow 5$, $2 \r\rightarrow 4$, $3 \r\rightarrow 3$, $4 \r\rightarrow 2$, $5 \r\rightarrow 1$.
+
+### Trường hợp 2: Chuyển biến liên tục thành biến nhóm
+
+Ví dụ chuyển biến `age` (tuổi) thành biến nhóm `age_group`:
+
+- Dưới 30 tuổi $\r\rightarrow 1$
+- 30 đến 50 tuổi $\r\rightarrow 2$
+- Trên 50 tuổi $\r\rightarrow 3$
+
+1. **Transform** $\r\rightarrow$ **Recode into Different Variables...**
+2. Chọn biến `age`, đặt tên biến mới `age_cat`, chọn **Change**.
+3. Nhấn **Old and New Values...** để định nghĩa khoảng giá trị cũ và mã số mới.
+4. Nhấn **Continue** $\r\rightarrow$ **OK**.
+
+---
+
+## 3. Lọc Dữ Liệu Phân Tích (Select Cases)
+
+Nếu bạn chỉ muốn phân tích trên một phân nhóm đối tượng (ví dụ: chỉ phân tích nhóm bệnh nhân Nam):
+
+1. **Data** $\r\rightarrow$ **Select Cases...**
+2. Chọn **If condition is satisfied**, nhấn nút **If...**
+3. Nhập điều kiện (ví dụ: `sex = 1`).
+4. Nhấn **Continue** $\r\rightarrow$ **OK**.
