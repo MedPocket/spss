@@ -1,0 +1,26 @@
+---
+import "katex/dist/katex.min.css";
+---
+
+<script>
+  import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
+
+  function renderMath() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      throwOnError: false,
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", renderMath);
+  } else {
+    renderMath();
+  }
+  document.addEventListener("astro:page-load", renderMath);
+</script>
