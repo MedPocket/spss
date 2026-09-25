@@ -2,9 +2,9 @@
 
 [![GitHub Pages](https://github.com/MedPocket/spss/actions/workflows/pages.yml/badge.svg)](https://medpocket.github.io/spss)
 
-**SPSS** là trang web hướng dẫn sử dụng SPSS trong thống kê và phân tích số liệu, được xây dựng bằng khung tài liệu [**Blume**](https://useblume.dev) (phát triển trên nền Astro và Vite).
+**SPSS** là trang web hướng dẫn sử dụng SPSS trong thống kê và phân tích số liệu, được xây dựng bằng khung tài liệu [**Blume**](https://useblume.dev).
 
-## Phát triển cục bộ
+## Phát triển
 
 Để bắt đầu, hãy đảm bảo bạn đã cài đặt [Bun](https://bun.com) trên hệ thống. Sau đó thực hiện các bước:
 

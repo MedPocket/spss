@@ -2,7 +2,7 @@ import { defineConfig } from "blume";
 
 export default defineConfig({
   title: "SPSS",
-  description: "Tài liệu hướng dẫn sử dụng SPSS trong thống kê và phân tích số liệu.",
+  description: "Ứng dụng SPSS trong thống kê và phân tích số liệu.",
 
   feedback: false,
 
