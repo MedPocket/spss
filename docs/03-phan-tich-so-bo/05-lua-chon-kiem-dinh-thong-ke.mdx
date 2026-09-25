@@ -1,0 +1,37 @@
+---
+title: 05. Lựa Chọn Kiểm Định Thống Kê Phù Hợp
+description: Cây quyết định và bảng tổng hợp lựa chọn các phép kiểm thống kê tham số và phi tham số trong nghiên cứu.
+---
+
+# Lựa Chọn Kiểm Định Thống Kê Phù Hợp (Choosing the Right Statistic)
+
+Việc lựa chọn đúng phép kiểm thống kê phụ thuộc vào câu hỏi nghiên cứu, loại biến số, số lượng nhóm so sánh và điều kiện phân phối của dữ liệu.
+
+---
+
+## 1. Ma Trận Lựa Chọn Phép Kiểm Thống Kê
+
+| Mục Tiêu Nghiên Cứu                      | Loại Biến Độc Lập (IV)   | Loại Biến Phụ Thuộc (DV) | Phép Kiểm Tham Số                      | Phép Kiểm Phi Tham Số Tương Ứng |
+| :--------------------------------------- | :----------------------- | :----------------------- | :------------------------------------- | :------------------------------ |
+| **Mối quan hệ / Tương quan giữa 2 biến** | Liên tục                 | Liên tục                 | Tương quan Pearson ($r$)               | Tương quan Spearman ($          |
+| $\rho$)                                  |
+| **Dự báo kết cục từ biến độc lập**       | 1 hoặc nhiều biến        | Liên tục                 | Hồi quy tuyến tính (Linear Regression) | -                               |
+| **Dự báo xác suất sự kiện nhị phân**     | 1 hoặc nhiều biến        | Định danh nhị phân       | Hồi quy Logistic (Logistic Regression) | -                               |
+| **So sánh 2 nhóm độc lập**               | Định danh (2 nhóm)       | Liên tục                 | Independent-samples t-test             | Mann-Whitney U test             |
+| **So sánh 2 thời điểm / Cặp ghép**       | Định danh (2 thời điểm)  | Liên tục                 | Paired-samples t-test                  | Wilcoxon signed-rank test       |
+| **So sánh $\ge 3$ nhóm độc lập**         | Định danh ($\ge 3$ nhóm) | Liên tục                 | One-way ANOVA                          | Kruskal-Wallis test             |
+| **So sánh $\ge 3$ thời điểm lặp lại**    | Thời gian ($\ge 3$ lần)  | Liên tục                 | One-way Repeated Measures ANOVA        | Friedman test                   |
+| **Mối liên quan giữa 2 biến định tính**  | Định danh                | Định danh                | -                                      | Chi-square test ($\chi^2$)      |
+
+---
+
+## 2. Tiêu Chí Chọn Phép Kiểm Tham Số (Parametric Tests)
+
+Các phép kiểm tham số (như T-test, ANOVA, Pearson) đòi hỏi dữ liệu khắt khe hơn:
+
+1. **Thang đo:** Biến phụ thuộc phải thuộc thang đo liên tục (Interval / Scale).
+2. **Phân phối chuẩn (Normality):** Biến phụ thuộc có phân phối chuẩn trong các nhóm.
+3. **Đồng nhất phương sai (Homogeneity of Variance):** Kiểm định Levene's test có $P > .05$.
+4. **Mẫu ngẫu nhiên & Độc lập:** Các quan sát độc lập với nhau.
+
+> **Khuyên dùng:** Nếu dữ liệu vi phạm nghiêm trọng phân phối chuẩn hoặc kích thước mẫu quá nhỏ ($N < 30$), hãy chuyển sang sử dụng **Phép kiểm phi tham số (Non-parametric Tests)** tương ứng.

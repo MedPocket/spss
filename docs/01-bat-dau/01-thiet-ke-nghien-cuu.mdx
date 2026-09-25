@@ -1,0 +1,50 @@
+---
+title: 01. Thiết Kế Nghiên Cứu
+description: Hướng dẫn lựa chọn biến số, thang đo đo lường, đảm bảo độ tin cậy và độ giá trị trong nghiên cứu thống kê.
+---
+
+# Thiết Kế Nghiên Cứu (Designing a Study)
+
+Một nghiên cứu thành công phụ thuộc rất lớn vào khâu thiết kế nghiên cứu ban đầu. Việc lập kế hoạch cẩn thận giúp bạn thu thập dữ liệu chính xác, tránh các sai sót không thể sửa chữa sau khi đã thu thập xong số liệu.
+
+## 1. Lựa Chọn Biến Số và Thang Đo Đo Lường
+
+Trong thống kê, một **biến số (variable)** là một đặc tính hoặc thuộc tính có thể nhận các giá trị khác nhau giữa các cá thể hoặc quan sát.
+
+### Các Thang Đo Đo Lường (Scales of Measurement)
+
+Việc xác định đúng loại thang đo rất quan trọng vì nó quyết định phép kiểm thống kê nào bạn có thể sử dụng.
+
+| Thang Đo                | Đặc Điểm                                                                              | Ví Dụ                                                                   | Phép Kiểm Phù Hợp                                                    |
+| :---------------------- | :------------------------------------------------------------------------------------ | :---------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| **Định danh (Nominal)** | Phân loại không có thứ tự hay thứ bậc.                                                | Giới tính (1 = Nam, 2 = Nữ), Nhóm máu, Tình trạng hôn nhân.             | Chi-square, Thống kê phi tham số, Tần số ($N$, %).                   |
+| **Thứ bậc (Ordinal)**   | Có thứ tự phân cấp nhưng khoảng cách giữa các mức không bằng nhau.                    | Trình độ học vấn, Mức độ hài lòng (Rất kém, Kém, Trung bình, Khá, Tốt). | Kiểm định phi tham số (Mann-Whitney, Kruskal-Wallis), Trung vị, IQR. |
+| **Khoảng (Interval)**   | Có thứ tự và khoảng cách bằng nhau giữa các giá trị, nhưng không có điểm 0 tuyệt đối. | Nhiệt độ ($^\circ\text{C}$), Điểm số IQ.                                | T-test, ANOVA, Tương quan Pearson, Trung bình, Độ lệch chuẩn.        |
+| **Tỷ lệ (Ratio)**       | Có thứ tự, khoảng cách bằng nhau và có điểm 0 tuyệt đối.                              | Tuổi, Cân nặng, Thu nhập, Huyết áp ($mmHg$).                            | T-test, ANOVA, Hồi quy, Tương quan Pearson.                          |
+
+> **Lưu ý:** Trong SPSS, thang đo Khoảng (Interval) và Tỷ lệ (Ratio) được gộp chung thành loại **Scale**.
+
+---
+
+## 2. Phân Loại Biến Số Trong Nghiên Cứu
+
+- **Biến độc lập (Independent Variable - IV):** Biến tác động hoặc dự báo biến khác (ví dụ: phương pháp điều trị, tuổi, giới tính).
+- **Biến phụ thuộc (Dependent Variable - DV):** Biến chịu sự tác động hoặc biến kết cục mà nghiên cứu muốn đo lường (ví dụ: điểm số trầm cảm, thời gian nằm viện).
+- **Biến nhiễu / Biến kiểm soát (Control / Covariate):** Biến bên ngoài có thể ảnh hưởng đến mối quan hệ giữa biến độc lập và biến phụ thuộc (ví dụ: độ tuổi, chỉ số BMI nền).
+
+---
+
+## 3. Độ Tin Cậy và Độ Giá Trị (Reliability & Validity)
+
+Để công cụ đo lường (như bảng hỏi) có giá trị khoa học, dữ liệu thu thập phải đáp ứng:
+
+1. **Độ tin cậy (Reliability):** Tính nhất quán của công cụ đo lường qua thời gian hoặc giữa các mục câu hỏi (được đánh giá bằng hệ số Cronbach's Alpha).
+2. **Độ giá trị (Validity):** Mức độ công cụ đo lường phản ánh đúng bản chất của khái niệm cần đo (được đánh giá qua độ giá trị nội dung, độ giá trị cấu trúc bằng phân tích nhân tố EFA).
+
+---
+
+## 4. Các Thiết Kế Nghiên Cứu Phổ Biến
+
+- **Nghiên cứu quan sát / Tương quan (Correlational/Observational):** Khám phá mối liên quan giữa các biến mà không can thiệp (như nghiên cứu cắt ngang, đoàn hệ, bệnh-chứng).
+- **Nghiên cứu thực nghiệm (Experimental):** Tác động can thiệp có nhóm chứng ngẫu nhiên (RCT) để chứng minh mối quan hệ nguyên nhân - kết quả.
+- **Nghiên cứu lặp lại / Theo thời gian (Repeated Measures / Longitudinal):** Đo lường trên cùng một nhóm đối tượng qua nhiều thời điểm (trước - sau can thiệp, theo dõi 1 tháng, 6 tháng).

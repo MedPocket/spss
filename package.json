@@ -1,8 +1,8 @@
 {
-  "name": "@medpocket/ultraso",
+  "name": "@medpocket/spss",
   "version": "0.1.0",
   "private": true,
-  "description": "Document for clinical ultrasound",
+  "description": "Tài liệu hướng dẫn sử dụng SPSS trong thống kê và phân tích số liệu",
   "type": "module",
   "scripts": {
     "dev": "blume dev",

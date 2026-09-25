@@ -1,0 +1,44 @@
+---
+title: 02. Chuẩn Bị Sổ Mã Hóa
+description: Hướng dẫn xây dựng sổ mã hóa (Codebook), đặt tên biến, gán nhãn và xử lý dữ liệu khuyết.
+---
+
+# Chuẩn Bị Sổ Mã Hóa (Preparing a Codebook)
+
+Trước khi nhập dữ liệu vào SPSS, bạn cần lập một **Sổ mã hóa (Codebook)**. Sổ mã hóa là tài liệu ghi nhận chi tiết cách bạn chuyển đổi các câu hỏi trong phiếu điều tra thành các biến số và giá trị số trong SPSS.
+
+---
+
+## 1. Thành Phần Của Sổ Mã Hóa
+
+Một sổ mã hóa tiêu chuẩn bao gồm các thông tin sau:
+
+1. **Tên biến (Variable Name):** Tên viết tắt ngắn gọn đại diện cho câu hỏi (ví dụ: `ID`, `sex`, `age`, `educ`, `satisf1`).
+2. **Nhãn biến (Variable Label):** Mô tả chi tiết đầy đủ ý nghĩa của câu hỏi (ví dụ: _Mức độ hài lòng với dịch vụ y tế câu 1_).
+3. **Mã hóa giá trị (Value Codes):** Quy định các con số tương ứng với các phương án trả lời (ví dụ: `1 = Nam`, `2 = Nữ`).
+4. **Mã dữ liệu khuyết (Missing Values):** Giá trị gán cho các câu trả lời bị bỏ trống hoặc không áp dụng (ví dụ: `99` hoặc `999`).
+
+---
+
+## 2. Mẫu Sổ Mã Hóa Ví Dụ
+
+| Tên Biến  | Nhãn Biến                 | Loại Thang Đo | Quy Tắc Mã Hóa Giá Trị                                    | Mã Khuyết |
+| :-------- | :------------------------ | :------------ | :-------------------------------------------------------- | :-------- |
+| `ID`      | Mã số định danh đối tượng | Nominal       | Số định danh duy nhất (1, 2, 3...)                        | Không có  |
+| `sex`     | Giới tính đối tượng       | Nominal       | 1 = Nam, 2 = Nữ                                           | 9         |
+| `age`     | Tuổi tính theo năm        | Scale         | Số tuổi tính theo năm dương lịch                          | 999       |
+| `educ`    | Trình độ học vấn          | Ordinal       | 1 = Tiểu học, 2 = THCS, 3 = THPT, 4 = Đại học/Sau ĐH      | 9         |
+| `marital` | Tình trạng hôn nhân       | Nominal       | 1 = Độc thân, 2 = Kết hôn, 3 = Ly hôn/Góa                 | 9         |
+| `tp1`     | Mức độ lạc quan - Câu 1   | Ordinal       | Thang Likert 1-5: 1 = Rất không đồng ý ... 5 = Rất đồng ý | 9         |
+
+---
+
+## 3. Quy Tắc Đặt Tên Biến Trong SPSS
+
+Khi đặt tên biến trong SPSS, bạn cần tuân thủ các quy tắc kỹ thuật sau:
+
+- Tên biến phải duy nhất trong tệp dữ liệu.
+- Phải bắt đầu bằng một chữ cái (không bắt đầu bằng số hay ký tự đặc biệt).
+- Không chứa khoảng trắng hoặc các ký tự đặc biệt như `?`, `!`, `*`, `-`, `+`.
+- Có thể dùng dấu gạch dưới `_` để phân cách các từ (ví dụ: `age_group`, `tot_score`).
+- Không trùng với các từ khóa hệ thống của SPSS (như `ALL`, `AND`, `BY`, `EQ`, `NOT`, `OR`, `TO`, `WITH`).

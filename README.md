@@ -1,19 +1,19 @@
-# Ultraso
+# SPSS
 
-[![GitHub Pages](https://github.com/MedPocket/ultraso/actions/workflows/pages.yml/badge.svg)](https://medpocket.github.io/ultraso)
+[![GitHub Pages](https://github.com/MedPocket/spss/actions/workflows/pages.yml/badge.svg)](https://medpocket.github.io/spss)
 
-**Ultraso** is built using the [**Blume**](https://useblume.dev) documentation framework (powered by Astro and Vite).
+**SPSS** là trang web hướng dẫn sử dụng SPSS trong thống kê và phân tích số liệu, được xây dựng bằng khung tài liệu [**Blume**](https://useblume.dev) (phát triển trên nền Astro và Vite).
 
-## Develop locally
+## Phát triển cục bộ
 
-To get started, make sure you have [Bun](https://bun.com) installed on your system. Then, follow these steps:
+Để bắt đầu, hãy đảm bảo bạn đã cài đặt [Bun](https://bun.com) trên hệ thống. Sau đó thực hiện các bước:
 
 ```bash
 bun install
 bun dev
 ```
 
-Open your web browser and navigate to http://localhost:4321/ultraso.
+Mở trình duyệt web và truy cập http://localhost:4321/spss.
 
 ## License
 
