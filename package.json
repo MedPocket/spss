@@ -13,11 +13,11 @@
     "typecheck": "blume check"
   },
   "dependencies": {
-    "blume": "^2.0.1"
+    "blume": "^2.1.1"
   },
   "devDependencies": {
-    "@types/node": "^26.6.1",
-    "oxfmt": "^0.68.0",
-    "oxlint": "^1.83.0"
+    "@types/node": "^26.6.4",
+    "oxfmt": "^0.71.0",
+    "oxlint": "^1.86.0"
   }
 }
