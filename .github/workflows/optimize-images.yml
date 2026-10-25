@@ -22,7 +22,7 @@ jobs:
 
       - name: Optimize Images
         id: optimize
-        uses: area44/optimize-img-action@fb66aebfb982ad85ce81b80e71920be32cc825e2 # main
+        uses: area44/optimize-img-action@7158a3cb27ef50cd5bfe334f2fa13b0452e3aeca # main
         with:
           path: "assets"
           jpeg_quality: "80"
